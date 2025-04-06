@@ -1,43 +1,42 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Site Under Construction</title>
+  <title>Coming Soon</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
-      background: #f8f9fa;
+      padding: 40px;
+      background: #f0f4f8;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      overflow: hidden;
+      height: calc(100vh - 80px); /* accounting for top/bottom padding */
       animation: fadeIn 2s ease-in-out;
+      box-sizing: border-box;
     }
 
     .container {
       text-align: center;
-      color: #333;
+      color: #1e3a8a;
     }
 
     .icon {
-      font-size: 80px;
-      margin-bottom: 20px;
-      animation: bounce 2s infinite;
+      width: 120px;
+      height: 120px;
+      margin-bottom: 25px;
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       margin: 10px 0;
     }
 
     p {
-      font-size: 1.2rem;
-      color: #666;
+      font-size: 1.3rem;
+      color: #334155;
     }
 
     @keyframes fadeIn {
@@ -45,17 +44,33 @@
       to { opacity: 1; }
     }
 
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-15px); }
+    @keyframes spinner_ZpfF {
+      100% { transform: rotate(360deg); }
+    }
+
+    .spinner_d9Sa {
+      transform-origin: center;
+      fill: #22c55e; /* Green clock hands */
+    }
+
+    .spinner_qQQY {
+      animation: spinner_ZpfF 9s linear infinite;
+    }
+
+    .spinner_pote {
+      animation: spinner_ZpfF .75s linear infinite;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="icon">🚧</div>
-    <h1>Site Under Construction</h1>
-    <p>We're working hard to bring something awesome. Stay tuned!</p>
+    <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#1e3a8a" d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,20a9,9,0,1,1,9-9A9,9,0,0,1,12,21Z"/>
+      <rect class="spinner_d9Sa spinner_qQQY" x="11" y="6" rx="1" width="2" height="7"/>
+      <rect class="spinner_d9Sa spinner_pote" x="11" y="11" rx="1" width="2" height="9"/>
+    </svg>
+    <h1>Coming Soon</h1>
+    <p>We’re getting things ready. Check back shortly!</p>
   </div>
 </body>
 </html>
